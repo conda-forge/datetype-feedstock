@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "datetype" %}
 {% set version = "2024.2.28" %}
 
@@ -6,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/datetype-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/datetype-{{ version }}.tar.gz
   sha256: 9840ab907099a4e0ecd9418464bc4b68d525dd0e588a35f9b9bec5a5cda27b69
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools >=61.0.0
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -29,6 +30,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/glyph/DateType
