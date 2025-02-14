@@ -20,6 +20,7 @@ requirements:
     - python {{ python_min }}
     - setuptools >=61.0.0
     - pip
+    - wheel
   run:
     - python >={{ python_min }}
 
