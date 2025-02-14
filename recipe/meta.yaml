@@ -1,4 +1,3 @@
-{% set python_min = "3.10" %}
 {% set name = "datetype" %}
 {% set version = "2025.2.13" %}
 
