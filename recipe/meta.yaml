@@ -1,5 +1,5 @@
 {% set name = "datetype" %}
-{% set version = "2025.2.13" %}
+{% set version = "2025.10.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/datetype-{{ version }}.tar.gz
-  sha256: 7b309698cb4fcab5c68d08eeac5d9ecc84f02255ba95e5caa8cbe38d8ed3b3f3
+  sha256: 42ac51ed9b33a6eaf082802b8a83d14f456b51e715b1167c131acd352595aacd
 
 build:
   noarch: python
