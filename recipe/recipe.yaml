@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: datetype
-  version: 2025.10.9
+  version: "2025.11.30"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/datetype-${{ version }}.tar.gz
-  sha256: 42ac51ed9b33a6eaf082802b8a83d14f456b51e715b1167c131acd352595aacd
+  sha256: 96ca1e81788e2978ec17eef0bb2286ca9dd5c418091a918881c607367f364578
 
 build:
   number: 0
